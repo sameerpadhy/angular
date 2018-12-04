@@ -1,0 +1,42 @@
+<h3>All Books</h3>
+<table class="table table-striped">
+    <thead>
+      <tr class="bg-primary">
+        <th>Book ID</th>
+        <th>Title</th>
+        <th>Author</th>
+        <th>Publication Year</th>
+        <th>Edit Action</th>
+        <th>Delete Action</th>
+      </tr>
+    </thead>
+    <tbody>
+            <tr *ngFor="let row of allBooks">
+                    <td *ngFor="let col of booksCols">{{row[col]}}</td>
+                    <td><button class="btn btn-primary" (click)="selectedData(row)">edit</button></td>
+                    <td><button class="btn btn-primary" (click)="selectedData(row)">delete</button></td>
+                </tr>
+    </tbody>
+  </table>
+
+
+  <h3>All Readers</h3>
+<table class="table table-striped">
+    <thead>
+      <tr class="bg-primary">
+        <th>Reder ID</th>
+        <th>Name</th>
+        <th>weakly Reading Goal</th>
+        <th>Total Minutes Read</th>
+        <th>Edit Action</th>
+        <th>Delete Action</th>
+      </tr>
+    </thead>
+    <tbody>
+            <tr *ngFor="let row of allReaders">
+                    <td *ngFor="let col of readersCols">{{row[col]}}</td>
+                    <td><button class="btn btn-primary">edit</button></td>
+                    <td><button class="btn btn-primary">delete</button></td>
+                </tr>
+    </tbody>
+  </table>
